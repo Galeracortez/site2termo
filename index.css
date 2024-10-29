@@ -1,0 +1,127 @@
+body {  
+    min-height: 100vh; /* Ocupa toda a altura da tela */  
+    background-color: #f0f4f8; /* Cor de fundo leve */  
+    color: #333; /* Texto escuro para contraste */  
+    display: flex;  
+    flex-direction: column;  
+}  
+
+header {  
+    background: linear-gradient(45deg, #81cfe0, #f3a683);  
+    padding: 20px;  
+    text-align: center;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+}  
+
+h1 {  
+    color: #fff;  
+    font-size: 2.5rem;  
+    animation: fadeIn 1s ease-in-out;  
+}  
+
+nav {  
+    margin-top: 10px;  
+}  
+
+nav ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+nav ul li {  
+    display: inline;  
+}  
+
+nav ul a {  
+    padding: 15px 20px;  
+    text-decoration: none;  
+    color: #fff;  
+    transition: background 0.3s, transform 0.3s;  
+}  
+
+nav ul a:hover {  
+    background-color: #57c0de;  
+    transform: scale(1.1);  
+}  
+
+main {  
+    flex: 1; /* Permite que o main preencha o espaço disponível */  
+    padding: 20px; /* Espaço para o conteúdo */  
+    display: flex;  
+    flex-direction: column; /* Coloca tudo em coluna */  
+    justify-content: space-between; /* Adiciona espaço entre elementos em main */  
+}  
+
+.items {  
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */  
+    gap: 20px; /* Espaçamento entre os itens */  
+    width: 100%; /* Ocupa 100% da largura */  
+    padding: 20px; /* Espaçamento interno na seção de itens */  
+    flex: 1; /* Faz com que a seção .items preencha o espaço restante */  
+}  
+
+.item {  
+    background-color: #fff; /* Fundo claro para os itens */  
+    border-radius: 10px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;  
+}  
+
+.item img {  
+    width: 100%;  
+    height: 200px; /* Tamanho fixo para as imagens para padronização */  
+    object-fit: cover;  
+    display: block; /* Remove o espaço extra abaixo da imagem */  
+}  
+
+.item h4 {  
+    padding: 10px;  
+    text-align: center;  
+    margin: 0; /* Remove o espaço padrão da margem */  
+}  
+
+.item button {  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    border: none;  
+    background-color: #ffebcd; /* Cor de fundo creme */  
+    color: black;  
+    cursor: pointer;  
+    font-size: 18px;  
+    margin: 10px; /* Margin para o botão */  
+    display: block; /* Faz o botão ocupar largura total dentro do item */  
+    width: calc(100% - 20px); /* Ajusta a largura do botão para ocupar 100% menos margens */  
+}  
+
+.item button:hover {  
+    background-color: #ffebcd; /* Mantém a mesma cor ao passar o mouse */  
+}  
+
+footer {  
+    text-align: center;  
+    padding: 20px;  
+    background-color: #81cfe0;  
+    color: #fff;  
+}  
+
+@keyframes fadeIn {  
+    from {  
+        opacity: 0;  
+    }  
+    to {  
+        opacity: 1;  
+    }  
+}  
+
+@media screen and (max-width: 1024px) {  
+    .items {  
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */  
+    }  
+}  
+
+@media screen and (max-width: 768px) {  
+    .items {  
+        grid-template-columns: repeat(1, 1fr); /* Uma coluna em telas muito pequenas */  
+    }  
+}
